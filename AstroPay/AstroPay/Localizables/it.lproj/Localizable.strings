@@ -1,0 +1,26 @@
+"Profile" = "Profilo";
+"First Name" = "Nome";
+"Last Name" = "Cognome";
+"Email" = "Email";
+"Password" = "Parola d'ordine";
+"Login" = "Login";
+"Register" = "Registrati";
+"Account Number" = "Numero di conto";
+"Balance" = "Bilancia";
+"Deposit" = "Depositare";
+"Withdrawal" = "Ritiro";
+"Purchase" = "Acquistare";
+"Send" = "Inviare";
+"Sell" = "Vendere";
+
+// Alerts
+
+"Ok" = "Ok";
+"Alert" = "Avviso";
+"Success" = "Riuscito";
+"Missing First Name, Try Again" = "Nome mancante, riprova";
+"Missing Last Name, Try Again" = "Cognome mancante, riprova";
+"Missing Email, Try Again" = "Email mancante, riprova";
+"Missing Password, Try Again" = "Parola d'ordine mancante, riprova";
+"Verify Information!" = "Verifica informazioni!";
+"User Registered!" = "Utente registrato!";

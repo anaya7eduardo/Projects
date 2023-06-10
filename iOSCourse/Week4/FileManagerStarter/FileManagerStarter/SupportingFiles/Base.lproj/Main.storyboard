@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D2z-vD-pV7">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Schedule-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ScheduleListController" customModule="FileManagerStarter" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uzO-81-ooW">
+                                <rect key="frame" x="0.0" y="88" width="428" height="804"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="eventCell" textLabel="OOo-pq-wBy" detailTextLabel="vUI-Fb-n73" style="IBUITableViewCellStyleSubtitle" id="esf-3R-W4R">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="esf-3R-W4R" id="1Aq-g6-rUT">
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OOo-pq-wBy">
+                                                    <rect key="frame" x="20" y="7.0000000000000009" width="25" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vUI-Fb-n73">
+                                                    <rect key="frame" x="19.999999999999996" y="23.333333333333336" width="40.666666666666664" height="13.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uzO-81-ooW" secondAttribute="trailing" id="9iu-5N-bAT"/>
+                            <constraint firstItem="uzO-81-ooW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Brx-QT-HDV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uzO-81-ooW" secondAttribute="bottom" id="OD9-XM-gC7"/>
+                            <constraint firstItem="uzO-81-ooW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YSW-Vg-C6i"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Schedule" id="Ywi-iQ-urX">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="fsf-o6-dKy">
+                            <connections>
+                                <action selector="editEvent:" destination="BYZ-38-t0r" id="KsT-jM-8n9"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Add" image="plus" catalog="system" id="IT9-2W-lQC">
+                            <connections>
+                                <action selector="addEvent:" destination="BYZ-38-t0r" id="FLO-10-wgH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableview" destination="uzO-81-ooW" id="2nU-dQ-vwH"/>
+                        <segue destination="cCq-AV-nfs" kind="presentation" id="2V9-T8-8TM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="82.366071428571431"/>
+        </scene>
+        <!--Create Event Controller-->
+        <scene sceneID="JN1-Tq-fvI">
+            <objects>
+                <viewController id="cCq-AV-nfs" customClass="CreateEventController" customModule="FileManagerStarter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w6h-8i-ifH">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="iob-Os-46s">
+                                <rect key="frame" x="54" y="328" width="320" height="216"/>
+                            </datePicker>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Create Event" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rAN-Xu-bZ1">
+                                <rect key="frame" x="20" y="258" width="388" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Xfj-Fp-fHO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="al3-st-dpa">
+                                <rect key="frame" x="20" y="564" width="388" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="hBz-SK-MC1"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemIndigoColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Create Event"/>
+                                <connections>
+                                    <action selector="createPressed:" destination="cCq-AV-nfs" eventType="touchUpInside" id="zXn-Lu-hb0"/>
+                                    <action selector="datePickerChanged:" destination="cCq-AV-nfs" eventType="touchUpInside" id="gZb-by-wnd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pz7-1x-Vz2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iob-Os-46s" firstAttribute="centerX" secondItem="w6h-8i-ifH" secondAttribute="centerX" id="4pw-M6-Nsi"/>
+                            <constraint firstItem="al3-st-dpa" firstAttribute="leading" secondItem="pz7-1x-Vz2" secondAttribute="leading" constant="20" id="Iba-65-22L"/>
+                            <constraint firstItem="pz7-1x-Vz2" firstAttribute="trailing" secondItem="rAN-Xu-bZ1" secondAttribute="trailing" constant="20" id="K3g-HM-0jw"/>
+                            <constraint firstItem="al3-st-dpa" firstAttribute="top" secondItem="iob-Os-46s" secondAttribute="bottom" constant="20" id="T3w-Ft-uFo"/>
+                            <constraint firstItem="pz7-1x-Vz2" firstAttribute="trailing" secondItem="al3-st-dpa" secondAttribute="trailing" constant="20" id="XET-hs-CuU"/>
+                            <constraint firstItem="rAN-Xu-bZ1" firstAttribute="leading" secondItem="pz7-1x-Vz2" secondAttribute="leading" constant="20" id="XF8-Nj-8Lx"/>
+                            <constraint firstItem="iob-Os-46s" firstAttribute="centerY" secondItem="w6h-8i-ifH" secondAttribute="centerY" id="qrS-YN-8H9"/>
+                            <constraint firstItem="iob-Os-46s" firstAttribute="top" secondItem="rAN-Xu-bZ1" secondAttribute="bottom" constant="20" id="rGC-n1-oig"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="createEventsTextField" destination="rAN-Xu-bZ1" id="NYA-SN-4ag"/>
+                        <outlet property="datePicker" destination="iob-Os-46s" id="W9o-C5-RNz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z7Z-fL-40d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1748" y="82"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fLH-AF-CaS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D2z-vD-pV7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Aqd-AN-ONA">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cA8-oK-9Ce"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C7M-4H-cqx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="82.366071428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

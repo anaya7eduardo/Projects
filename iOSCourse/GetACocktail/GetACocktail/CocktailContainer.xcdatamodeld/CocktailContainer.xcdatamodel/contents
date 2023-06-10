@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22D68" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CocktailEntity" representedClassName="CocktailEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="details" attributeType="String"/>
+        <attribute name="ingredients" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="recipe" attributeType="String"/>
+        <attribute name="thumb" attributeType="String" valueTransformerName="UIImageTransformer"/>
+    </entity>
+</model>

@@ -1,0 +1,22 @@
+//
+//  NetworkManager.swift
+//  GetACocktail
+//
+//  Created by unkn0wn on 3/28/23.
+//
+
+import Combine
+import Foundation
+
+protocol Networkable {
+    func getDataFromURL<T:Decodable>(url: URL, type: T.Type) -> AnyPublisher<T,Error>
+}
+
+class NetworkManager: Networkable {
+    func getDataFromURL<T>(url: URL, type: T.Type) -> AnyPublisher<T, Error> where T : Decodable {
+        return URLSession.shared.dataTaskPublisher(for: url)
+            .map { $0.data }
+            .decode(type: T.self, decoder: JSONDecoder())
+            .eraseToAnyPublisher()
+    }
+}

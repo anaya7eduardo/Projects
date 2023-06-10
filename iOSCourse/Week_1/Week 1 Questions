@@ -1,0 +1,43 @@
+Week 1 Questions
+
+What is the difference between var & let?
+	var allows us to store variables
+	let allows us to store constants
+
+What are optionals in Swift?
+	can be of any data type, containing or not a value
+
+What are some ways we can unwrap them (optionals)?
+	using if-else blocks
+
+What is the lifecycle of an app?
+	There are 5 states: Not Running, Inactive, Active, Background and Suspended.
+	Apps basically goes from -> Not Running to Foreground (Inactive or Active) and/or Background (Background to Inactive) and then Suspended (Not Running).
+
+What are the differences between a class and a struct?
+	Classes are reference type, Structs are value type objects.
+
+How do we define a protocol in Swift (create one)?
+	You define protocols in a very similar way to classes, structures, and enumerations:
+	
+	protocol SomeProtocol {
+ 	   // protocol definition goes here
+	}
+
+	Here’s an example of a protocol with a single instance property requirement:
+
+	protocol FullyNamed {
+   	   var fullName: String { get }
+	}
+
+What data types are you familiar with in Swift?
+	int, bool, String
+
+What is the project Navigator in Xcode?
+	Is where you find all your current codes
+
+What is a closure?
+	Is self-contained block of functionality that can be passed around and used in your code.
+
+What does the mutating keyword mean/do?
+	In order to modify the properties of a value type, you use this keyword, said so, the method can then have the ability to mutate the values of the properties and write it back to the original structure when the method implementation ends.

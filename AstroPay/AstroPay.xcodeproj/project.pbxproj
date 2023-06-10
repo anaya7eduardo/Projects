@@ -1,0 +1,800 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D56873B529A7C0F0003B224D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56873B429A7C0F0003B224D /* AppDelegate.swift */; };
+		D56873B729A7C0F0003B224D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56873B629A7C0F0003B224D /* SceneDelegate.swift */; };
+		D56873B929A7C0F0003B224D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56873B829A7C0F0003B224D /* ViewController.swift */; };
+		D56873BC29A7C0F0003B224D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56873BA29A7C0F0003B224D /* Main.storyboard */; };
+		D56873C129A7C0F1003B224D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D56873C029A7C0F1003B224D /* Assets.xcassets */; };
+		D56873C429A7C0F1003B224D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56873C229A7C0F1003B224D /* LaunchScreen.storyboard */; };
+		D56873CF29A7C0F1003B224D /* AstroPayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56873CE29A7C0F1003B224D /* AstroPayTests.swift */; };
+		D56873D929A7C0F1003B224D /* AstroPayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56873D829A7C0F1003B224D /* AstroPayUITests.swift */; };
+		D56873DB29A7C0F1003B224D /* AstroPayUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56873DA29A7C0F1003B224D /* AstroPayUITestsLaunchTests.swift */; };
+		D56873ED29A7C16C003B224D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56873EC29A7C16C003B224D /* HomeViewController.swift */; };
+		D56873EF29A7C185003B224D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56873EE29A7C185003B224D /* ProfileViewController.swift */; };
+		D56873F129A7C19C003B224D /* CryptoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56873F029A7C19C003B224D /* CryptoViewController.swift */; };
+		D56873F329A7C1B0003B224D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56873F229A7C1B0003B224D /* LoginViewController.swift */; };
+		D56873F529A7C49F003B224D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56873F429A7C49F003B224D /* LoginViewModel.swift */; };
+		D56873F829A7C55C003B224D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56873F729A7C55C003B224D /* String+Extension.swift */; };
+		D56873FA29A7C7F0003B224D /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56873F929A7C7F0003B224D /* StringExtensionTests.swift */; };
+		D56873FC29A7C8D4003B224D /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56873FB29A7C8D4003B224D /* LoginViewModelTests.swift */; };
+		D56873FE29A7CCD3003B224D /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56873FD29A7CCD3003B224D /* Profile.swift */; };
+		D568740029A7CD32003B224D /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56873FF29A7CD32003B224D /* ProfileViewModel.swift */; };
+		D568740229A7D06C003B224D /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D568740129A7D06C003B224D /* ProfileTableViewCell.swift */; };
+		D568740429A7D3C2003B224D /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = D568740329A7D3C2003B224D /* Account.swift */; };
+		D568740629A7D6C1003B224D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D568740529A7D6C1003B224D /* HomeViewModel.swift */; };
+		D568740A29A7F154003B224D /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D568740929A7F154003B224D /* HomeTableViewCell.swift */; };
+		D568740C29A92C91003B224D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D568740B29A92C91003B224D /* README.md */; };
+		D568740F29A94302003B224D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D568740E29A94302003B224D /* RegisterViewController.swift */; };
+		D585799A29AA973C00DD4CF9 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D585799929AA973C00DD4CF9 /* RegisterViewModel.swift */; };
+		D58579A129AAA54500DD4CF9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D58579A329AAA54500DD4CF9 /* Localizable.strings */; };
+		D5976A1429AD99DA0021E50E /* AstroPay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D5976A1229AD99DA0021E50E /* AstroPay.xcdatamodeld */; };
+		D5976A1629AD9AC80021E50E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5976A1529AD9AC80021E50E /* DataManager.swift */; };
+		D5976A1A29AE4FF40021E50E /* RegisterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5976A1929AE4FF40021E50E /* RegisterViewModelTests.swift */; };
+		D5976A1C29AE75130021E50E /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5976A1B29AE75130021E50E /* Keychain.swift */; };
+		D5976A1E29AE753E0021E50E /* Crypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5976A1D29AE753E0021E50E /* Crypt.swift */; };
+		D5976A2029AE77100021E50E /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5976A1F29AE77100021E50E /* App.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D56873CB29A7C0F1003B224D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D56873A929A7C0F0003B224D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D56873B029A7C0F0003B224D;
+			remoteInfo = AstroPay;
+		};
+		D56873D529A7C0F1003B224D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D56873A929A7C0F0003B224D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D56873B029A7C0F0003B224D;
+			remoteInfo = AstroPay;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D56873B129A7C0F0003B224D /* AstroPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AstroPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D56873B429A7C0F0003B224D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D56873B629A7C0F0003B224D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D56873B829A7C0F0003B224D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D56873BB29A7C0F0003B224D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D56873C029A7C0F1003B224D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D56873C329A7C0F1003B224D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D56873C529A7C0F1003B224D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D56873CA29A7C0F1003B224D /* AstroPayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AstroPayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D56873CE29A7C0F1003B224D /* AstroPayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroPayTests.swift; sourceTree = "<group>"; };
+		D56873D429A7C0F1003B224D /* AstroPayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AstroPayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D56873D829A7C0F1003B224D /* AstroPayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroPayUITests.swift; sourceTree = "<group>"; };
+		D56873DA29A7C0F1003B224D /* AstroPayUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroPayUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D56873EC29A7C16C003B224D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D56873EE29A7C185003B224D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D56873F029A7C19C003B224D /* CryptoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoViewController.swift; sourceTree = "<group>"; };
+		D56873F229A7C1B0003B224D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D56873F429A7C49F003B224D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		D56873F729A7C55C003B224D /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		D56873F929A7C7F0003B224D /* StringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
+		D56873FB29A7C8D4003B224D /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		D56873FD29A7CCD3003B224D /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		D56873FF29A7CD32003B224D /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		D568740129A7D06C003B224D /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		D568740329A7D3C2003B224D /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		D568740529A7D6C1003B224D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		D568740929A7F154003B224D /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		D568740B29A92C91003B224D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D568740E29A94302003B224D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		D585799929AA973C00DD4CF9 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		D58579A229AAA54500DD4CF9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D58579A429AAA55E00DD4CF9 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D58579A529ACCB1900DD4CF9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D58579A629ACCB3E00DD4CF9 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D5976A1329AD99DA0021E50E /* AstroPay.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AstroPay.xcdatamodel; sourceTree = "<group>"; };
+		D5976A1529AD9AC80021E50E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		D5976A1929AE4FF40021E50E /* RegisterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModelTests.swift; sourceTree = "<group>"; };
+		D5976A1B29AE75130021E50E /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		D5976A1D29AE753E0021E50E /* Crypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypt.swift; sourceTree = "<group>"; };
+		D5976A1F29AE77100021E50E /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D56873AE29A7C0F0003B224D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D56873C729A7C0F1003B224D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D56873D129A7C0F1003B224D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D56873A829A7C0F0003B224D = {
+			isa = PBXGroup;
+			children = (
+				D568740B29A92C91003B224D /* README.md */,
+				D56873B329A7C0F0003B224D /* AstroPay */,
+				D56873CD29A7C0F1003B224D /* AstroPayTests */,
+				D56873D729A7C0F1003B224D /* AstroPayUITests */,
+				D56873B229A7C0F0003B224D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D56873B229A7C0F0003B224D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D56873B129A7C0F0003B224D /* AstroPay.app */,
+				D56873CA29A7C0F1003B224D /* AstroPayTests.xctest */,
+				D56873D429A7C0F1003B224D /* AstroPayUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D56873B329A7C0F0003B224D /* AstroPay */ = {
+			isa = PBXGroup;
+			children = (
+				D56873F629A7C539003B224D /* extensions */,
+				D56873E729A7C108003B224D /* Modules */,
+				D585799C29AAA3DE00DD4CF9 /* Localizables */,
+				D5976A1F29AE77100021E50E /* App.swift */,
+				D56873B429A7C0F0003B224D /* AppDelegate.swift */,
+				D56873B629A7C0F0003B224D /* SceneDelegate.swift */,
+				D56873B829A7C0F0003B224D /* ViewController.swift */,
+				D56873BA29A7C0F0003B224D /* Main.storyboard */,
+				D56873C029A7C0F1003B224D /* Assets.xcassets */,
+				D56873C229A7C0F1003B224D /* LaunchScreen.storyboard */,
+				D56873C529A7C0F1003B224D /* Info.plist */,
+				D5976A1229AD99DA0021E50E /* AstroPay.xcdatamodeld */,
+				D5976A1529AD9AC80021E50E /* DataManager.swift */,
+				D5976A1D29AE753E0021E50E /* Crypt.swift */,
+				D5976A1B29AE75130021E50E /* Keychain.swift */,
+			);
+			path = AstroPay;
+			sourceTree = "<group>";
+		};
+		D56873CD29A7C0F1003B224D /* AstroPayTests */ = {
+			isa = PBXGroup;
+			children = (
+				D56873CE29A7C0F1003B224D /* AstroPayTests.swift */,
+				D56873F929A7C7F0003B224D /* StringExtensionTests.swift */,
+				D56873FB29A7C8D4003B224D /* LoginViewModelTests.swift */,
+				D5976A1929AE4FF40021E50E /* RegisterViewModelTests.swift */,
+			);
+			path = AstroPayTests;
+			sourceTree = "<group>";
+		};
+		D56873D729A7C0F1003B224D /* AstroPayUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D56873D829A7C0F1003B224D /* AstroPayUITests.swift */,
+				D56873DA29A7C0F1003B224D /* AstroPayUITestsLaunchTests.swift */,
+			);
+			path = AstroPayUITests;
+			sourceTree = "<group>";
+		};
+		D56873E729A7C108003B224D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D568740D29A93FC8003B224D /* Register */,
+				D56873EB29A7C145003B224D /* Login */,
+				D56873EA29A7C136003B224D /* Crypto */,
+				D56873E929A7C125003B224D /* Profile */,
+				D56873E829A7C119003B224D /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D56873E829A7C119003B224D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D56873EC29A7C16C003B224D /* HomeViewController.swift */,
+				D568740529A7D6C1003B224D /* HomeViewModel.swift */,
+				D568740329A7D3C2003B224D /* Account.swift */,
+				D568740929A7F154003B224D /* HomeTableViewCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D56873E929A7C125003B224D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D56873EE29A7C185003B224D /* ProfileViewController.swift */,
+				D56873FF29A7CD32003B224D /* ProfileViewModel.swift */,
+				D56873FD29A7CCD3003B224D /* Profile.swift */,
+				D568740129A7D06C003B224D /* ProfileTableViewCell.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		D56873EA29A7C136003B224D /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				D56873F029A7C19C003B224D /* CryptoViewController.swift */,
+			);
+			path = Crypto;
+			sourceTree = "<group>";
+		};
+		D56873EB29A7C145003B224D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D56873F229A7C1B0003B224D /* LoginViewController.swift */,
+				D56873F429A7C49F003B224D /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D56873F629A7C539003B224D /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D56873F729A7C55C003B224D /* String+Extension.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		D568740D29A93FC8003B224D /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				D568740E29A94302003B224D /* RegisterViewController.swift */,
+				D585799929AA973C00DD4CF9 /* RegisterViewModel.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		D585799C29AAA3DE00DD4CF9 /* Localizables */ = {
+			isa = PBXGroup;
+			children = (
+				D58579A329AAA54500DD4CF9 /* Localizable.strings */,
+			);
+			path = Localizables;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D56873B029A7C0F0003B224D /* AstroPay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D56873DE29A7C0F1003B224D /* Build configuration list for PBXNativeTarget "AstroPay" */;
+			buildPhases = (
+				D56873AD29A7C0F0003B224D /* Sources */,
+				D56873AE29A7C0F0003B224D /* Frameworks */,
+				D56873AF29A7C0F0003B224D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AstroPay;
+			productName = AstroPay;
+			productReference = D56873B129A7C0F0003B224D /* AstroPay.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D56873C929A7C0F1003B224D /* AstroPayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D56873E129A7C0F1003B224D /* Build configuration list for PBXNativeTarget "AstroPayTests" */;
+			buildPhases = (
+				D56873C629A7C0F1003B224D /* Sources */,
+				D56873C729A7C0F1003B224D /* Frameworks */,
+				D56873C829A7C0F1003B224D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D56873CC29A7C0F1003B224D /* PBXTargetDependency */,
+			);
+			name = AstroPayTests;
+			productName = AstroPayTests;
+			productReference = D56873CA29A7C0F1003B224D /* AstroPayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D56873D329A7C0F1003B224D /* AstroPayUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D56873E429A7C0F1003B224D /* Build configuration list for PBXNativeTarget "AstroPayUITests" */;
+			buildPhases = (
+				D56873D029A7C0F1003B224D /* Sources */,
+				D56873D129A7C0F1003B224D /* Frameworks */,
+				D56873D229A7C0F1003B224D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D56873D629A7C0F1003B224D /* PBXTargetDependency */,
+			);
+			name = AstroPayUITests;
+			productName = AstroPayUITests;
+			productReference = D56873D429A7C0F1003B224D /* AstroPayUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D56873A929A7C0F0003B224D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					D56873B029A7C0F0003B224D = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					D56873C929A7C0F1003B224D = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = D56873B029A7C0F0003B224D;
+					};
+					D56873D329A7C0F1003B224D = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = D56873B029A7C0F0003B224D;
+					};
+				};
+			};
+			buildConfigurationList = D56873AC29A7C0F0003B224D /* Build configuration list for PBXProject "AstroPay" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				es,
+				fr,
+				it,
+			);
+			mainGroup = D56873A829A7C0F0003B224D;
+			productRefGroup = D56873B229A7C0F0003B224D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D56873B029A7C0F0003B224D /* AstroPay */,
+				D56873C929A7C0F1003B224D /* AstroPayTests */,
+				D56873D329A7C0F1003B224D /* AstroPayUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D56873AF29A7C0F0003B224D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D58579A129AAA54500DD4CF9 /* Localizable.strings in Resources */,
+				D56873C429A7C0F1003B224D /* LaunchScreen.storyboard in Resources */,
+				D56873C129A7C0F1003B224D /* Assets.xcassets in Resources */,
+				D568740C29A92C91003B224D /* README.md in Resources */,
+				D56873BC29A7C0F0003B224D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D56873C829A7C0F1003B224D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D56873D229A7C0F1003B224D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D56873AD29A7C0F0003B224D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D56873EF29A7C185003B224D /* ProfileViewController.swift in Sources */,
+				D56873F329A7C1B0003B224D /* LoginViewController.swift in Sources */,
+				D5976A1E29AE753E0021E50E /* Crypt.swift in Sources */,
+				D56873ED29A7C16C003B224D /* HomeViewController.swift in Sources */,
+				D56873F129A7C19C003B224D /* CryptoViewController.swift in Sources */,
+				D56873B929A7C0F0003B224D /* ViewController.swift in Sources */,
+				D568740029A7CD32003B224D /* ProfileViewModel.swift in Sources */,
+				D5976A1429AD99DA0021E50E /* AstroPay.xcdatamodeld in Sources */,
+				D585799A29AA973C00DD4CF9 /* RegisterViewModel.swift in Sources */,
+				D56873B529A7C0F0003B224D /* AppDelegate.swift in Sources */,
+				D5976A1C29AE75130021E50E /* Keychain.swift in Sources */,
+				D56873B729A7C0F0003B224D /* SceneDelegate.swift in Sources */,
+				D568740229A7D06C003B224D /* ProfileTableViewCell.swift in Sources */,
+				D5976A2029AE77100021E50E /* App.swift in Sources */,
+				D56873FE29A7CCD3003B224D /* Profile.swift in Sources */,
+				D56873F829A7C55C003B224D /* String+Extension.swift in Sources */,
+				D56873F529A7C49F003B224D /* LoginViewModel.swift in Sources */,
+				D5976A1629AD9AC80021E50E /* DataManager.swift in Sources */,
+				D568740F29A94302003B224D /* RegisterViewController.swift in Sources */,
+				D568740629A7D6C1003B224D /* HomeViewModel.swift in Sources */,
+				D568740A29A7F154003B224D /* HomeTableViewCell.swift in Sources */,
+				D568740429A7D3C2003B224D /* Account.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D56873C629A7C0F1003B224D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D56873FC29A7C8D4003B224D /* LoginViewModelTests.swift in Sources */,
+				D56873FA29A7C7F0003B224D /* StringExtensionTests.swift in Sources */,
+				D56873CF29A7C0F1003B224D /* AstroPayTests.swift in Sources */,
+				D5976A1A29AE4FF40021E50E /* RegisterViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D56873D029A7C0F1003B224D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D56873DB29A7C0F1003B224D /* AstroPayUITestsLaunchTests.swift in Sources */,
+				D56873D929A7C0F1003B224D /* AstroPayUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D56873CC29A7C0F1003B224D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D56873B029A7C0F0003B224D /* AstroPay */;
+			targetProxy = D56873CB29A7C0F1003B224D /* PBXContainerItemProxy */;
+		};
+		D56873D629A7C0F1003B224D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D56873B029A7C0F0003B224D /* AstroPay */;
+			targetProxy = D56873D529A7C0F1003B224D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D56873BA29A7C0F0003B224D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D56873BB29A7C0F0003B224D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D56873C229A7C0F1003B224D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D56873C329A7C0F1003B224D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D58579A329AAA54500DD4CF9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D58579A229AAA54500DD4CF9 /* en */,
+				D58579A429AAA55E00DD4CF9 /* es */,
+				D58579A529ACCB1900DD4CF9 /* fr */,
+				D58579A629ACCB3E00DD4CF9 /* it */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D56873DC29A7C0F1003B224D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D56873DD29A7C0F1003B224D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D56873DF29A7C0F1003B224D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QLQGBRW7H9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AstroPay/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.astropay.apple.AstroPay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D56873E029A7C0F1003B224D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QLQGBRW7H9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AstroPay/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.astropay.apple.AstroPay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D56873E229A7C0F1003B224D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QLQGBRW7H9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.astropay.apple.AstroPayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AstroPay.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AstroPay";
+			};
+			name = Debug;
+		};
+		D56873E329A7C0F1003B224D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QLQGBRW7H9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.astropay.apple.AstroPayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AstroPay.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AstroPay";
+			};
+			name = Release;
+		};
+		D56873E529A7C0F1003B224D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QLQGBRW7H9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.astropay.apple.AstroPayUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AstroPay;
+			};
+			name = Debug;
+		};
+		D56873E629A7C0F1003B224D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QLQGBRW7H9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.astropay.apple.AstroPayUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AstroPay;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D56873AC29A7C0F0003B224D /* Build configuration list for PBXProject "AstroPay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D56873DC29A7C0F1003B224D /* Debug */,
+				D56873DD29A7C0F1003B224D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D56873DE29A7C0F1003B224D /* Build configuration list for PBXNativeTarget "AstroPay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D56873DF29A7C0F1003B224D /* Debug */,
+				D56873E029A7C0F1003B224D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D56873E129A7C0F1003B224D /* Build configuration list for PBXNativeTarget "AstroPayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D56873E229A7C0F1003B224D /* Debug */,
+				D56873E329A7C0F1003B224D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D56873E429A7C0F1003B224D /* Build configuration list for PBXNativeTarget "AstroPayUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D56873E529A7C0F1003B224D /* Debug */,
+				D56873E629A7C0F1003B224D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D5976A1229AD99DA0021E50E /* AstroPay.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D5976A1329AD99DA0021E50E /* AstroPay.xcdatamodel */,
+			);
+			currentVersion = D5976A1329AD99DA0021E50E /* AstroPay.xcdatamodel */;
+			name = AstroPay.xcdatamodeld;
+			path = Modules/Profile/AstroPay.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D56873A929A7C0F0003B224D /* Project object */;
+}

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AudioExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beats.headphones" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="yrG-pn-URl">
+                                <rect key="frame" x="50" y="94.333333333333343" width="328" height="313.33333333333331"/>
+                                <color key="tintColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="314" id="TMe-4c-T0X"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pn3-Hd-1tY">
+                                <rect key="frame" x="100" y="528" width="228" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="3kz-u3-Vnb"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemBlueColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Play / Stop">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QIn-me-N81"/>
+                                </connections>
+                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvY-KV-Z4A">
+                                <rect key="frame" x="0.0" y="858" width="428" height="49"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="XNc-gd-H7x"/>
+                                    <barButtonItem image="play.fill" catalog="system" id="KnM-iM-GHB">
+                                        <connections>
+                                            <action selector="play:" destination="BYZ-38-t0r" id="0hq-R8-WIK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ec5-EZ-9Yz"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="kMO-1p-O9W"/>
+                                    <barButtonItem image="pause.fill" catalog="system" id="PHI-Jh-MaX">
+                                        <connections>
+                                            <action selector="pause:" destination="BYZ-38-t0r" id="Aue-YM-VpK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ell-yz-q3e"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="5La-7C-i3T"/>
+                                    <barButtonItem image="stop.fill" catalog="system" id="wAD-tK-2Cg">
+                                        <connections>
+                                            <action selector="stop:" destination="BYZ-38-t0r" id="otC-SL-kRl"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="CyM-Aq-zvX"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="jX9-Oe-tB5"/>
+                                    <barButtonItem image="restart.circle.fill" catalog="system" id="OPT-5n-s8i">
+                                        <connections>
+                                            <action selector="restart:" destination="BYZ-38-t0r" id="YKX-TY-PmF"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Qwp-M0-Y88"/>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljK-Ye-1CV">
+                                <rect key="frame" x="15" y="708" width="398" height="30"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="XsE-LL-uGi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yrG-pn-URl" secondAttribute="trailing" constant="50" id="1oF-Rg-1dG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ljK-Ye-1CV" secondAttribute="trailing" constant="15" id="3F1-Ib-ZKf"/>
+                            <constraint firstItem="ljK-Ye-1CV" firstAttribute="top" secondItem="Pn3-Hd-1tY" secondAttribute="bottom" constant="135" id="3eC-NU-Ghv"/>
+                            <constraint firstItem="yrG-pn-URl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="B0i-ep-uxH"/>
+                            <constraint firstItem="ljK-Ye-1CV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="B3j-O6-AgQ"/>
+                            <constraint firstItem="Pn3-Hd-1tY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CX3-cB-fH6"/>
+                            <constraint firstItem="fvY-KV-Z4A" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MdJ-al-v4N"/>
+                            <constraint firstItem="Pn3-Hd-1tY" firstAttribute="top" secondItem="yrG-pn-URl" secondAttribute="bottom" constant="120" id="NCa-J8-m9y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pn3-Hd-1tY" secondAttribute="trailing" constant="100" id="VXZ-t9-GpF"/>
+                            <constraint firstItem="Pn3-Hd-1tY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="cyh-et-qqR"/>
+                            <constraint firstItem="fvY-KV-Z4A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ga2-uk-ihP"/>
+                            <constraint firstItem="yrG-pn-URl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="hHu-BY-SQi"/>
+                            <constraint firstItem="ljK-Ye-1CV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lUH-lR-hkY"/>
+                            <constraint firstItem="yrG-pn-URl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oV8-TD-vlZ"/>
+                            <constraint firstItem="fvY-KV-Z4A" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="15" id="tzS-Hr-oZw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="Pn3-Hd-1tY" id="xf2-6A-C3E"/>
+                        <outlet property="currentSongLabel" destination="ljK-Ye-1CV" id="QrA-Tq-gij"/>
+                        <outlet property="headphones" destination="yrG-pn-URl" id="Hhe-tI-VXE"/>
+                        <outlet property="pauseItem" destination="PHI-Jh-MaX" id="qJo-ze-67t"/>
+                        <outlet property="playItem" destination="KnM-iM-GHB" id="4mf-W1-ucP"/>
+                        <outlet property="restartItem" destination="OPT-5n-s8i" id="HpJ-NV-4Y1"/>
+                        <outlet property="stopItem" destination="wAD-tK-2Cg" id="ie4-19-hZU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="68"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="beats.headphones" catalog="system" width="128" height="121"/>
+        <image name="pause.fill" catalog="system" width="116" height="128"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
+        <image name="restart.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="stop.fill" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
