@@ -59,7 +59,7 @@ class PokemonViewModel: ObservableObject {
                 if let pokemonName {
                     Text(pokemonName)
                         .foregroundColor(.yellow)
-                        .font(.system(size: 18, weight: .semibold))
+                        .font(.system(size: 13, weight: .semibold))
                 }
                 
             case .failure(let error):
@@ -67,12 +67,16 @@ class PokemonViewModel: ObservableObject {
                 
             case .empty:
                 VStack {
-                    ProgressView().progressViewStyle(CircularProgressViewStyle(tint: .indigo))
                     Text("Loading Card...")
+                        .font(.system(size: 10, weight: .semibold))
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle(tint: .indigo))
+                        .frame(width: frameWidth, height: frameHeight)
                 }
                 
             @unknown default:
                 EmptyView()
+                    .frame(width: frameWidth, height: frameHeight)
             }
         }
     }
