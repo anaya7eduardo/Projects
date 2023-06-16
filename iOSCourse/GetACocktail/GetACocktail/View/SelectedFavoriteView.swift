@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SelectedFavoriteView: View {
     
+    @StateObject var favoritesViewModel = FavoritesViewModel()
+    
     let favoriteTitle: String
     let favoriteImage: String
     let favoriteDetails: String
@@ -19,54 +21,36 @@ struct SelectedFavoriteView: View {
     
     var body: some View {
         VStack {
-                Text(favoriteTitle)
-                    .font(.system(.title, design: .rounded))
-                    .fontWeight(.black)
-                
-                HStack {
-                    VStack {
-                        URLImage(urlString: favoriteImage, width: 150.0, height: 150.0, radius: 15.0)
-                    }
-                    .frame(width: 140.0, height: 140.0)
-                    .padding(10.0)
-                    .background(.teal)
-                    .cornerRadius(15.0)
-                    
-                    VStack(alignment: .center) {
-                        Text(favoriteDetails)
-                    }
-                    .frame(maxWidth: .infinity, minHeight: 100.0)
-                    .padding(30.0)
-                    .background(.yellow)
-                    .cornerRadius(20.0)
+            Text(favoriteTitle)
+                .font(.system(.title, design: .rounded))
+                .fontWeight(.black)
+            
+            HStack {
+                VStack {
+                    favoritesViewModel.loadImage(imageURL: favoriteImage, frameWidth: 150.0, frameHeight: 150.0, radius: 15.0)
                 }
+                .frame(width: 140.0, height: 140.0)
+                .padding(10.0)
+                .background(.teal)
+                .cornerRadius(15.0)
                 
-                ScrolledView(text: favoriteIngredients)
-
-                ScrolledView(text: favoriteRecipe)
-
+                VStack(alignment: .center) {
+                    Text(favoriteDetails)
+                }
+                .frame(maxWidth: .infinity, minHeight: 100.0)
+                .padding(30.0)
+                .background(.yellow)
+                .cornerRadius(20.0)
+            }
+            
+            ScrolledView(text: favoriteIngredients)
+            
+            ScrolledView(text: favoriteRecipe)
+            
         }.padding()
-            .foregroundColor(textColor())
+            .foregroundColor(favoritesViewModel.textColor(colorScheme))
     }
     
-    func textColor() -> Color {
-        let scheme = colorScheme
-        switch scheme {
-        case .light:
-            return .black
-        case .dark:
-            return .white
-        @unknown default:
-            return .green
-        }
-    }
-    
-}
-
-struct SelectedFavoriteView_Previews: PreviewProvider {
-    static var previews: some View {
-        SelectedFavoriteView(favoriteTitle: "Title", favoriteImage: "Image", favoriteDetails: "Details", favoriteIngredients: "Ingredients", favoriteRecipe: "Recipe")
-    }
 }
 
 struct ScrolledView: View {
@@ -83,3 +67,9 @@ struct ScrolledView: View {
         .cornerRadius(20)
     }
 }
+
+//struct SelectedFavoriteView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SelectedFavoriteView(favoriteTitle: "Title", favoriteImage: "Image", favoriteDetails: "Details", favoriteIngredients: "Ingredients", favoriteRecipe: "Recipe")
+//    }
+//}

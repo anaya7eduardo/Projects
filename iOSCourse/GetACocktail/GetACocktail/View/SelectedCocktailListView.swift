@@ -1,16 +1,17 @@
 //
-//  RandomView.swift
+//  SelectedCocktailListView.swift
 //  GetACocktail
 //
-//  Created by unkn0wn on 3/28/23.
+//  Created by unkn0wn on 6/15/23.
 //
 
 import SwiftUI
 
-struct RandomView: View {
-    
-    @StateObject var randomViewModel: RandomViewModel = RandomViewModel(networkManager: NetworkManager())
+struct SelectedCocktailListView: View {
+    @StateObject var cocktailListViewModel: CocktailListViewModel = CocktailListViewModel(networkManager: NetworkManager())
     @StateObject var coreDataViewModel = CoreDataViewModel()
+    
+    let cocktailID: String
     
     @Environment(\.colorScheme) var colorScheme
     
@@ -24,14 +25,13 @@ struct RandomView: View {
     
     var body: some View {
         VStack {
-            ForEach(randomViewModel.cocktailRandom, id: \.self) { cocktail in
+            ForEach(cocktailListViewModel.cocktail, id: \.self) { cocktail in
                 Text(cocktail.strDrink.capitalized)
                     .font(.system(.title, design: .rounded))
                     .fontWeight(.black)
-                
                 HStack {
                     VStack {
-                        randomViewModel.loadImage(imageURL: cocktail.strDrinkThumb, frameWidth: 150.0, frameHeight: 150.0, radius: 15.0)
+                        cocktailListViewModel.loadImage(imageURL: cocktail.strDrinkThumb, frameWidth: 150.0, frameHeight: 150.0, radius: 15.0)
                     }
                     .frame(width: 140.0, height: 140.0)
                     .padding(10.0)
@@ -127,14 +127,9 @@ struct RandomView: View {
                 .background(.gray)
                 .cornerRadius(20)
                 
-                ButtonAction(title: "Random", color: .green, action: {
-                    update()
-                })
-                
-                ButtonAction(title: "Favorite", color: .purple, action: {
+                Button(action: {
                     cocktailName = cocktail.strDrink.capitalized
-                    
-                    cocktailThumb = "\(cocktail.strDrinkThumb)/preview"
+                    cocktailThumb = "\(cocktail.strDrinkThumb)"
                     
                     if cocktail.strCategory != "Other/Unknown" {
                         cocktailDetails = cocktail.strCategory
@@ -206,47 +201,30 @@ struct RandomView: View {
                             recipe: cocktailRecipe)
                         buttonDisabled.toggle()
                     }
-                    
-                }).disabled(buttonDisabled)
+                }) {
+                    Text("Favorite")
+                        .padding()
+                        .font(.title)
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity, maxHeight: 35)
+                        .background(.purple)
+                        .cornerRadius(30)
+                        .shadow(radius: 10)
+                }
+                .padding(.top, 15)
+                .padding(.horizontal)
+                .disabled(buttonDisabled)
             }
         }.onAppear {
-            randomViewModel.getCocktail(urlString: APIEndpoints.randomCocktailAPI)
+            cocktailListViewModel.getCocktailByID(for: cocktailID)
         }.padding()
-            .foregroundColor(randomViewModel.textColor(colorScheme))
-    }
-    
-    func update() {
-        randomViewModel.getCocktail(urlString: APIEndpoints.randomCocktailAPI)
-        if buttonDisabled {
-            buttonDisabled.toggle()
-        }
+            .foregroundColor(cocktailListViewModel.textColor(colorScheme))
     }
     
 }
 
-struct RandomView_Previews: PreviewProvider {
-    static var previews: some View {
-        RandomView()
-    }
-}
-
-struct ButtonAction: View {
-    var title: String
-    var color: Color
-    var action: () -> Void
-    
-    var body: some View {
-        Button(action: action) {
-            Text(title)
-                .padding()
-                .font(.title)
-                .foregroundColor(.white)
-                .frame(maxWidth: .infinity, maxHeight: 35)
-                .background(color)
-                .cornerRadius(30)
-                .shadow(radius: 10)
-        }
-        .padding(.top, 15)
-        .padding(.horizontal)
-    }
-}
+//struct SelectedCocktailListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SelectedCocktailListView(cocktailID: "CocktailID")
+//    }
+//}

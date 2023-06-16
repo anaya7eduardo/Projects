@@ -1,17 +1,18 @@
 //
-//  RandomViewModel.swift
+//  CocktailListViewModel.swift
 //  GetACocktail
 //
-//  Created by unkn0wn on 3/28/23.
+//  Created by unkn0wn on 6/15/23.
 //
 
 import Combine
 import Foundation
 import SwiftUI
 
-class RandomViewModel: ObservableObject {
+class CocktailListViewModel: ObservableObject {
     
-    @Published var cocktailRandom: [CocktailInfo] = []
+    @Published var cocktailList: [Drink] = []
+    @Published var cocktail: [CocktailInfo] = []
     
     var networkManager: Networkable
     
@@ -21,8 +22,8 @@ class RandomViewModel: ObservableObject {
         self.networkManager = networkManager
     }
     
-    func getCocktail(urlString: String) {
-        guard let url = URL(string: urlString) else { return }
+    func getCocktailByID(for id: String) {
+        guard let url = APIEndpoints.cocktailByIdAPI(id: id) else { return }
         self.networkManager.getDataFromURL(url: url, type: Cocktail.self)
             .sink { completion in
                 switch completion {
@@ -36,7 +37,27 @@ class RandomViewModel: ObservableObject {
         } receiveValue: { cocktailArray in
             //print(cocktailArray)
             DispatchQueue.main.async {
-                self.cocktailRandom = cocktailArray.drinks
+                self.cocktail = cocktailArray.drinks
+            }
+        }.store(in: &cancellable)
+    }
+    
+    func getCocktailList(urlString: String) {
+        guard let url = URL(string: urlString) else { return }
+        self.networkManager.getDataFromURL(url: url, type: CocktailList.self)
+            .sink { completion in
+                switch completion {
+                case .finished:
+                    //print("Task is done")
+                    break
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            
+        } receiveValue: { cocktailArray in
+            //print(cocktailArray)
+            DispatchQueue.main.async {
+                self.cocktailList = cocktailArray.drinks
             }
         }.store(in: &cancellable)
     }

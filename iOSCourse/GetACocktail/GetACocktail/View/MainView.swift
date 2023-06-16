@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MainView: View {
     
+    @StateObject var mainViewModel = MainViewModel()
+    
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
@@ -19,66 +21,58 @@ struct MainView: View {
                     .scaledToFill()
                     .edgesIgnoringSafeArea(.all)
                 
-                VStack(alignment: .center) {
-                    Spacer()
+                VStack {
                     Spacer()
                     
-                    NavigationLink(destination: RandomView()) {
-                        ZStack {
-                            Image(uiImage: UIImage(named: "randomCocktail")!)
-                                .resizable()
-                            VStack {
-                                Spacer()
-                                Text("Random")
-                                    .foregroundColor(textColor())
-                                    .font(.system(size: 30.0, weight: .semibold))
-                            }
-                        }
-                        .frame(width: 150.0, height: 150.0)
-                        .cornerRadius(15.0)
-                        .shadow(color: .teal, radius: 10.0, x: 10.0, y: 10.0)
-                    }
+                    
+                    NavigationLinkLogo(destination: CocktailListView(), image: "CocktailLogo", title: "List", textColor: mainViewModel.textColor(colorScheme), radius: 75.0, shadow: .purple)
+                    
                     
                     Spacer()
                     
-                    NavigationLink(destination: FavoritesView()) {
-                        ZStack {
-                            Image(uiImage: UIImage(named: "favoriteCocktail")!)
-                                .resizable()
-                            VStack {
-                                Spacer()
-                                Text("Favorites")
-                                    .foregroundColor(textColor())
-                                    .font(.system(size: 30.0, weight: .semibold))
-                            }
-                        }
-                        .frame(width: 150.0, height: 150.0)
-                        .cornerRadius(15.0)
-                        .shadow(color: .purple, radius: 10.0, x: 10.0, y: 10.0)
-                    }
+                    NavigationLinkLogo(destination: RandomView(), image: "randomCocktail", title: "Random", textColor: mainViewModel.textColor(colorScheme), radius: 15.0, shadow: .teal)
                     
                     Spacer()
+                    
+                    NavigationLinkLogo(destination: FavoritesView(), image: "favoriteCocktail", title: "Favorites", textColor: mainViewModel.textColor(colorScheme), radius: 15.0, shadow: .yellow)
+                    
                     Spacer()
                 }.padding()
             }
         }
     }
     
-    func textColor() -> Color {
-        let scheme = colorScheme
-        switch scheme {
-        case .light:
-            return .black
-        case .dark:
-            return .white
-        @unknown default:
-            return .green
-        }
-    }
 }
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
+    }
+}
+
+struct NavigationLinkLogo<Destination: View>: View {
+    var destination: Destination
+    var image: String
+    var title: String
+    var textColor: Color
+    var radius: CGFloat
+    var shadow: Color
+    
+    var body: some View {
+        NavigationLink(destination: destination) {
+            ZStack {
+                Image(uiImage: UIImage(named: image)!)
+                    .resizable()
+                VStack {
+                    Spacer()
+                    Text(title)
+                        .foregroundColor(textColor)
+                        .font(.system(size: 30.0, weight: .semibold))
+                }
+            }
+            .frame(width: 150.0, height: 150.0)
+            .cornerRadius(radius)
+            .shadow(color: shadow, radius: 10.0, x: 10.0, y: 10.0)
+        }
     }
 }
