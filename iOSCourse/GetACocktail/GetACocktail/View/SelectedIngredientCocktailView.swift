@@ -1,16 +1,21 @@
 //
-//  RandomView.swift
+//  SelectedIngredientCocktailView.swift
 //  GetACocktail
 //
-//  Created by unkn0wn on 3/28/23.
+//  Created by unkn0wn on 6/16/23.
 //
 
 import SwiftUI
 
-struct RandomView: View {
+struct SelectedIngredientCocktailView: View {
     
-    @StateObject var randomViewModel: RandomViewModel = RandomViewModel(networkManager: NetworkManager())
+    @StateObject var selectedIngredientCocktailViewModel: IngredientsGridViewModel = IngredientsGridViewModel(networkManager: NetworkManager())
+    
     @StateObject var coreDataViewModel = CoreDataViewModel()
+    
+    let idDrink: String
+    
+    @Environment(\.colorScheme) var colorScheme
     
     @State var cocktailName: String = ""
     @State var cocktailThumb: String = ""
@@ -20,23 +25,20 @@ struct RandomView: View {
     
     @State private var buttonDisabled: Bool = false
     
-    @Environment(\.colorScheme) var colorScheme
-    
     var body: some View {
         VStack {
-            ForEach(randomViewModel.cocktailRandom, id: \.self) { cocktail in
+            ForEach(selectedIngredientCocktailViewModel.cocktail, id: \.self) { cocktail in
                 HStack {
                     let strDrink = cocktail.strDrink.capitalized
                     Text(strDrink)
-                        .font(.system(size: randomViewModel.textSize(for: strDrink), design: .rounded))
+                        .font(.system(size: selectedIngredientCocktailViewModel.textSize(for: strDrink), design: .rounded))
                         .fontWeight(.black)
                         .scaledToFit()
                 }
                 .frame(height: 50.0)
-                
                 HStack {
                     VStack {
-                        randomViewModel.loadImage(imageURL: cocktail.strDrinkThumb, frameWidth: 150.0, frameHeight: 150.0, radius: 15.0)
+                        selectedIngredientCocktailViewModel.loadImage(imageURL: cocktail.strDrinkThumb, frameWidth: 150.0, frameHeight: 150.0, radius: 15.0)
                     }
                     .frame(width: 140.0, height: 140.0)
                     .padding(10.0)
@@ -65,53 +67,53 @@ struct RandomView: View {
                     LazyVGrid(columns: [GridItem(.flexible())]) {
                         Group {
                             if let cocktail1 = cocktail.strIngredient1 {
-                                Text("\(randomViewModel.formatText(cocktail.strMeasure1, cocktail1))")
+                                Text("\(selectedIngredientCocktailViewModel.formatText(cocktail.strMeasure1, cocktail1))")
                             }
                             if let cocktail2 = cocktail.strIngredient2 {
-                                Text("\(randomViewModel.formatText(cocktail.strMeasure2, cocktail2))")
+                                Text("\(selectedIngredientCocktailViewModel.formatText(cocktail.strMeasure2, cocktail2))")
                             }
                             if let cocktail3 = cocktail.strIngredient3 {
-                                Text("\(randomViewModel.formatText(cocktail.strMeasure3, cocktail3))")
+                                Text("\(selectedIngredientCocktailViewModel.formatText(cocktail.strMeasure3, cocktail3))")
                             }
                             if let cocktail4 = cocktail.strIngredient4 {
-                                Text("\(randomViewModel.formatText(cocktail.strMeasure4, cocktail4))")
+                                Text("\(selectedIngredientCocktailViewModel.formatText(cocktail.strMeasure4, cocktail4))")
                             }
                             if let cocktail5 = cocktail.strIngredient5 {
-                                Text("\(randomViewModel.formatText(cocktail.strMeasure5, cocktail5))")
+                                Text("\(selectedIngredientCocktailViewModel.formatText(cocktail.strMeasure5, cocktail5))")
                             }
                         }
                         Group {
                             if let cocktail6 = cocktail.strIngredient6 {
-                                Text("\(randomViewModel.formatText(cocktail.strMeasure6, cocktail6))")
+                                Text("\(selectedIngredientCocktailViewModel.formatText(cocktail.strMeasure6, cocktail6))")
                             }
                             if let cocktail7 = cocktail.strIngredient7 {
-                                Text("\(randomViewModel.formatText(cocktail.strMeasure7, cocktail7))")
+                                Text("\(selectedIngredientCocktailViewModel.formatText(cocktail.strMeasure7, cocktail7))")
                             }
                             if let cocktail8 = cocktail.strIngredient8 {
-                                Text("\(randomViewModel.formatText(cocktail.strMeasure8, cocktail8))")
+                                Text("\(selectedIngredientCocktailViewModel.formatText(cocktail.strMeasure8, cocktail8))")
                             }
                             if let cocktail9 = cocktail.strIngredient9 {
-                                Text("\(randomViewModel.formatText(cocktail.strMeasure9, cocktail9))")
+                                Text("\(selectedIngredientCocktailViewModel.formatText(cocktail.strMeasure9, cocktail9))")
                             }
                             if let cocktail10 = cocktail.strIngredient10 {
-                                Text("\(randomViewModel.formatText(cocktail.strMeasure10, cocktail10))")
+                                Text("\(selectedIngredientCocktailViewModel.formatText(cocktail.strMeasure10, cocktail10))")
                             }
                         }
                         Group {
                             if let cocktail11 = cocktail.strIngredient11 {
-                                Text("\(randomViewModel.formatText(cocktail.strMeasure11, cocktail11))")
+                                Text("\(selectedIngredientCocktailViewModel.formatText(cocktail.strMeasure11, cocktail11))")
                             }
                             if let cocktail12 = cocktail.strIngredient12 {
-                                Text("\(randomViewModel.formatText(cocktail.strMeasure12, cocktail12))")
+                                Text("\(selectedIngredientCocktailViewModel.formatText(cocktail.strMeasure12, cocktail12))")
                             }
                             if let cocktail13 = cocktail.strIngredient13 {
-                                Text("\(randomViewModel.formatText(cocktail.strMeasure13, cocktail13))")
+                                Text("\(selectedIngredientCocktailViewModel.formatText(cocktail.strMeasure13, cocktail13))")
                             }
                             if let cocktail14 = cocktail.strIngredient14 {
-                                Text("\(randomViewModel.formatText(cocktail.strMeasure14, cocktail14))")
+                                Text("\(selectedIngredientCocktailViewModel.formatText(cocktail.strMeasure14, cocktail14))")
                             }
                             if let cocktail15 = cocktail.strIngredient15 {
-                                Text("\(randomViewModel.formatText(cocktail.strMeasure15, cocktail15))")
+                                Text("\(selectedIngredientCocktailViewModel.formatText(cocktail.strMeasure15, cocktail15))")
                             }
                         }
                     }
@@ -131,17 +133,9 @@ struct RandomView: View {
                 .background(.gray)
                 .cornerRadius(20)
                 
-                ButtonAction(title: "Random", color: .green, action: {
-                    randomViewModel.getCocktail(urlString: APIEndpoints.randomCocktailAPI)
-                    if buttonDisabled {
-                        buttonDisabled.toggle()
-                    }
-                })
-                
-                ButtonAction(title: "Favorite", color: .purple, action: {
+                Button(action: {
                     cocktailName = cocktail.strDrink.capitalized
-                    
-                    cocktailThumb = "\(cocktail.strDrinkThumb)/preview"
+                    cocktailThumb = "\(cocktail.strDrinkThumb)"
                     
                     if cocktail.strCategory != "Other/Unknown" {
                         cocktailDetails = "\(cocktail.strCategory)\n\(cocktail.strAlcoholic)\n\(cocktail.strGlass)"
@@ -156,9 +150,9 @@ struct RandomView: View {
                         if let ingredient = cocktail.strIngredientValue(forKey: ingredientKey),
                            let measure = cocktail.strMeasureValue(forKey: measureKey) {
                             if i == 1 {
-                                cocktailIngredients = "\(randomViewModel.formatText(measure, ingredient))"
+                                cocktailIngredients = "\(selectedIngredientCocktailViewModel.formatText(measure, ingredient))"
                             } else {
-                                cocktailIngredients.append("\n\(randomViewModel.formatText(measure, ingredient))")
+                                cocktailIngredients.append("\n\(selectedIngredientCocktailViewModel.formatText(measure, ingredient))")
                             }
                         }
                     }
@@ -178,39 +172,30 @@ struct RandomView: View {
                             recipe: cocktailRecipe)
                         buttonDisabled.toggle()
                     }
-                    
-                }).disabled(buttonDisabled)
+                }) {
+                    Text("Favorite")
+                        .padding()
+                        .font(.title)
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity, maxHeight: 35)
+                        .background(.purple)
+                        .cornerRadius(30)
+                        .shadow(radius: 10)
+                }
+                .padding(.top, 15)
+                .padding(.horizontal)
+                .disabled(buttonDisabled)
             }
         }.onAppear {
-            randomViewModel.getCocktail(urlString: APIEndpoints.randomCocktailAPI)
+            selectedIngredientCocktailViewModel.getCocktailByID(for: idDrink)
         }.padding()
-            .foregroundColor(randomViewModel.textColor(colorScheme))
+            .foregroundColor(selectedIngredientCocktailViewModel.textColor(colorScheme))
     }
-}
-
-struct ButtonAction: View {
-    var title: String
-    var color: Color
-    var action: () -> Void
     
-    var body: some View {
-        Button(action: action) {
-            Text(title)
-                .padding()
-                .font(.title)
-                .foregroundColor(.white)
-                .frame(maxWidth: .infinity, maxHeight: 35)
-                .background(color)
-                .cornerRadius(30)
-                .shadow(radius: 10)
-        }
-        .padding(.top, 15)
-        .padding(.horizontal)
-    }
 }
 
-struct RandomView_Previews: PreviewProvider {
-    static var previews: some View {
-        RandomView()
-    }
-}
+//struct SelectedIngredientCocktailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SelectedIngredientCocktailView(idDrink: "ID Drink")
+//    }
+//}

@@ -21,9 +21,13 @@ struct SelectedFavoriteView: View {
     
     var body: some View {
         VStack {
-            Text(favoriteTitle)
-                .font(.system(.title, design: .rounded))
-                .fontWeight(.black)
+            HStack {
+                Text(favoriteTitle)
+                    .font(.system(size: favoritesViewModel.textSize(for: favoriteTitle), design: .rounded))
+                    .fontWeight(.black)
+                    .scaledToFit()
+            }
+            .frame(height: 50.0)
             
             HStack {
                 VStack {

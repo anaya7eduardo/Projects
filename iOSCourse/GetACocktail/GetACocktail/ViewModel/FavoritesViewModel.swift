@@ -25,7 +25,7 @@ class FavoritesViewModel: ObservableObject {
                 
             case .empty:
                 ZStack {
-                    Image(uiImage: UIImage(named: "CocktailLogo")!)
+                    Image(uiImage: UIImage(named: "cocktailLogo")!)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .clipShape(RoundedRectangle(cornerRadius: radius))
@@ -51,6 +51,27 @@ class FavoritesViewModel: ObservableObject {
             return .white
         @unknown default:
             return .green
+        }
+    }
+    
+    func textSize(for text: String) -> CGFloat {
+        let wordCount = text.count
+        
+        let extraSmallSizeRange = 1...9
+        let smallSizeRange = 10...19
+        let mediumSizeRange = 20...24
+        let largeSizeRange = 25...31
+        
+        if extraSmallSizeRange.contains(wordCount) {
+            return 40
+        } else if smallSizeRange.contains(wordCount) {
+            return 34
+        } else if mediumSizeRange.contains(wordCount) {
+            return 30
+        } else if largeSizeRange.contains(wordCount) {
+            return 24
+        } else {
+            return 16
         }
     }
     

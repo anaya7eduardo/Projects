@@ -20,4 +20,16 @@ class MainViewModel: ObservableObject {
             return .green
         }
     }
+    
+    func shadowColor(_ scheme: ColorScheme) -> Color {
+        let selectedScheme = scheme
+        switch selectedScheme {
+        case .light:
+            return .white
+        case .dark:
+            return .black
+        @unknown default:
+            return .green
+        }
+    }
 }

@@ -32,7 +32,7 @@ struct PokemonData: Codable, Identifiable {
     let rarity: Rarity?
     let flavorText: String?
     let nationalPokedexNumbers: [Int]
-    let legalities: Legalities
+    let legalities: DatumLegalities
     let images: PokemonImages
     let tcgplayer: Tcgplayer?
     let cardmarket: Cardmarket
@@ -88,14 +88,14 @@ struct Cardmarket: Codable {
 }
 
 enum UpdatedAt: String, Codable {
-    case the20230611 = "2023/06/11"
+    case the20230617 = "2023/06/17"
 }
 
-// MARK: - PokemonSet
+// MARK: - Set
 struct PokemonSet: Codable {
     let id, name, series: String
     let printedTotal, total: Int
-    let legalities: Legalities
+    let legalities: SetLegalities
     let ptcgoCode: String?
     let releaseDate, updatedAt: String
     let images: SetImages
@@ -106,8 +106,8 @@ struct SetImages: Codable {
     let symbol, logo: String
 }
 
-// MARK: - Legalities
-struct Legalities: Codable {
+// MARK: - SetLegalities
+struct SetLegalities: Codable {
     let unlimited: Expanded
     let expanded, standard: Expanded?
 }
@@ -119,6 +119,12 @@ enum Expanded: String, Codable {
 // MARK: - DatumImages
 struct PokemonImages: Codable {
     let small, large: String
+}
+
+// MARK: - DatumLegalities
+struct DatumLegalities: Codable {
+    let unlimited: Expanded
+    let expanded: Expanded?
 }
 
 enum Rarity: String, Codable {

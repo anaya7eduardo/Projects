@@ -1,16 +1,17 @@
 //
-//  CocktailListViewModel.swift
+//  IngredientsGridViewModel.swift
 //  GetACocktail
 //
-//  Created by unkn0wn on 6/15/23.
+//  Created by unkn0wn on 6/16/23.
 //
 
 import Combine
 import Foundation
 import SwiftUI
 
-class CocktailListViewModel: ObservableObject {
+class IngredientsGridViewModel: ObservableObject {
     
+    @Published var ingredientList: [Ingredient] = []
     @Published var cocktailList: [Drink] = []
     @Published var cocktail: [CocktailInfo] = []
     
@@ -42,8 +43,8 @@ class CocktailListViewModel: ObservableObject {
         }.store(in: &cancellable)
     }
     
-    func getCocktailList(urlString: String) {
-        guard let url = URL(string: urlString) else { return }
+    func getCocktailByIngredient(for ingredient: String) {
+        guard let url = APIEndpoints.cocktailByIngredient(ingredient: ingredient) else { return }
         self.networkManager.getDataFromURL(url: url, type: CocktailList.self)
             .sink { completion in
                 switch completion {
@@ -58,6 +59,26 @@ class CocktailListViewModel: ObservableObject {
             //print(cocktailArray)
             DispatchQueue.main.async {
                 self.cocktailList = cocktailArray.drinks
+            }
+        }.store(in: &cancellable)
+    }
+    
+    func getIngredientList(urlString: String) {
+        guard let url = URL(string: urlString) else { return }
+        self.networkManager.getDataFromURL(url: url, type: IngredientList.self)
+            .sink { completion in
+                switch completion {
+                case .finished:
+                    //print("Task is done")
+                    break
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            
+        } receiveValue: { cocktailArray in
+            //print(cocktailArray)
+            DispatchQueue.main.async {
+                self.ingredientList = cocktailArray.drinks
             }
         }.store(in: &cancellable)
     }
@@ -111,6 +132,11 @@ class CocktailListViewModel: ObservableObject {
         return string1.replacingOccurrences(of: "\\s+$", with: "", options: .regularExpression)+" "+string2
     }
     
+    func replaceWhitespaces(_ string: String?) -> String {
+        guard let string = string else { return "" }
+        return string.replacingOccurrences(of: "\\s", with: "_", options: .regularExpression)
+    }
+
     func textSize(for text: String) -> CGFloat {
         let wordCount = text.count
         

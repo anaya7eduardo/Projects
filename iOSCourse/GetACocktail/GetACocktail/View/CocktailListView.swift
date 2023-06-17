@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CocktailListView: View {
+    
     @StateObject var cocktailListViewModel: CocktailListViewModel = CocktailListViewModel(networkManager: NetworkManager())
     
     var body: some View {
