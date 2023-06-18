@@ -21,7 +21,7 @@ struct SelectedIngredientGridView: View {
                 LazyVGrid(columns: columns) {
                     ForEach(ingredientsGridViewModel.cocktailList, id: \.idDrink) { cocktail in
                         NavigationLink {
-                            SelectedIngredientCocktailView(idDrink: cocktail.idDrink)
+                            SelectedIngredientCocktailView(cocktailID: cocktail.idDrink)
                         } label: {
                             SelectedIngredientGridCellView(thumb: cocktail.strDrinkThumb, drink: cocktail.strDrink)
                         }

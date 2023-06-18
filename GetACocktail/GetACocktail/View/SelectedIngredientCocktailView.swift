@@ -13,9 +13,7 @@ struct SelectedIngredientCocktailView: View {
     
     @StateObject var coreDataViewModel = CoreDataViewModel()
     
-    let idDrink: String
-    
-    @Environment(\.colorScheme) var colorScheme
+    let cocktailID: String
     
     @State var cocktailName: String = ""
     @State var cocktailThumb: String = ""
@@ -24,6 +22,12 @@ struct SelectedIngredientCocktailView: View {
     @State var cocktailRecipe: String = ""
     
     @State private var buttonDisabled: Bool = false
+    
+    @State private var showAlert: Bool = false
+    @State private var alertMessage: String = ""
+    @State private var alertTitle: String = ""
+    
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         VStack {
@@ -161,8 +165,10 @@ struct SelectedIngredientCocktailView: View {
                     
                     //print(cocktailName + "\n" + cocktailThumb + "\n" + cocktailDetails + "\n" + cocktailIngredients + "\n" + cocktailRecipe)
                     
-                    if coreDataViewModel.savedEntities.contains(where: {$0.name == cocktailName}) {
-                        buttonDisabled.toggle()
+                    if coreDataViewModel.savedEntities.contains(where: { $0.name == cocktailName }) {
+                        showAlert = true
+                        alertTitle = "Warning ⚠️"
+                        alertMessage = "\(cocktailName) is already a favorite"
                     } else {
                         coreDataViewModel.addCocktail(
                             name: cocktailName,
@@ -170,8 +176,11 @@ struct SelectedIngredientCocktailView: View {
                             details: cocktailDetails,
                             ingredients: cocktailIngredients,
                             recipe: cocktailRecipe)
-                        buttonDisabled.toggle()
+                        showAlert = true
+                        alertTitle = "Success ❤️"
+                        alertMessage = "\(cocktailName) saved as favorite"
                     }
+                    buttonDisabled.toggle()
                 }) {
                     Text("Favorite")
                         .padding()
@@ -186,10 +195,19 @@ struct SelectedIngredientCocktailView: View {
                 .padding(.horizontal)
                 .disabled(buttonDisabled)
             }
-        }.onAppear {
-            selectedIngredientCocktailViewModel.getCocktailByID(for: idDrink)
-        }.padding()
-            .foregroundColor(selectedIngredientCocktailViewModel.textColor(colorScheme))
+        }
+        .onAppear {
+            selectedIngredientCocktailViewModel.getCocktailByID(for: cocktailID)
+        }
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text(alertTitle),
+                message: Text(alertMessage),
+                dismissButton: .default(Text("OK"))
+            )
+        }
+        .foregroundColor(selectedIngredientCocktailViewModel.textColor(colorScheme))
+        .padding()
     }
     
 }

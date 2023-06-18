@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		D51E47E929D5F5D600CBF182 /* CoreDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51E47E829D5F5D600CBF182 /* CoreDataViewModel.swift */; };
+		D543408C2A3E6906000C2859 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543408B2A3E6906000C2859 /* LaunchScreenView.swift */; };
 		D591C4CC2A3B6DA400F30DAF /* CocktailList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D591C4CB2A3B6DA400F30DAF /* CocktailList.swift */; };
 		D591C4CE2A3B723000F30DAF /* CocktailListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D591C4CD2A3B723000F30DAF /* CocktailListView.swift */; };
 		D591C4D02A3B73F000F30DAF /* CocktailListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D591C4CF2A3B73F000F30DAF /* CocktailListViewModel.swift */; };
 		D591C4D22A3B776600F30DAF /* SelectedCocktailListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D591C4D12A3B776600F30DAF /* SelectedCocktailListView.swift */; };
 		D591C4D42A3BB8DB00F30DAF /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D591C4D32A3BB8DB00F30DAF /* MainViewModel.swift */; };
+		D5A01F0A2A3F63860039A88A /* cocktailLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = D5A01F072A3F63860039A88A /* cocktailLogo.png */; };
+		D5A01F0B2A3F63860039A88A /* liquorBottles.png in Resources */ = {isa = PBXBuildFile; fileRef = D5A01F082A3F63860039A88A /* liquorBottles.png */; };
+		D5A01F0C2A3F63860039A88A /* cocktailList.png in Resources */ = {isa = PBXBuildFile; fileRef = D5A01F092A3F63860039A88A /* cocktailList.png */; };
 		D5B3A6C429D3C10900F4A151 /* GetACocktailApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B3A6C329D3C10900F4A151 /* GetACocktailApp.swift */; };
 		D5B3A6C829D3C10A00F4A151 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5B3A6C729D3C10A00F4A151 /* Assets.xcassets */; };
 		D5B3A6CB29D3C10A00F4A151 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5B3A6CA29D3C10A00F4A151 /* Preview Assets.xcassets */; };
@@ -31,7 +35,6 @@
 		D5B3A72029D3CA3700F4A151 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B3A71F29D3CA3700F4A151 /* FavoritesViewModel.swift */; };
 		D5B987B429DB63A400BCBBE0 /* SelectedFavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B987B329DB63A400BCBBE0 /* SelectedFavoriteView.swift */; };
 		D5C66BE129D5FC9000E2BD2B /* CocktailContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D5C66BDF29D5FC9000E2BD2B /* CocktailContainer.xcdatamodeld */; };
-		D5D0C2232A3D4EB4003B8EA6 /* liquorBottles.png in Resources */ = {isa = PBXBuildFile; fileRef = D5D0C2222A3D4EB4003B8EA6 /* liquorBottles.png */; };
 		D5D0C2252A3D5585003B8EA6 /* IngredientsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D0C2242A3D5585003B8EA6 /* IngredientsGridView.swift */; };
 		D5D0C2272A3D58E5003B8EA6 /* IngredientsGridCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D0C2262A3D58E5003B8EA6 /* IngredientsGridCellView.swift */; };
 		D5D0C2292A3D59B9003B8EA6 /* SelectedIngredientGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D0C2282A3D59B9003B8EA6 /* SelectedIngredientGridView.swift */; };
@@ -39,8 +42,6 @@
 		D5D0C22D2A3D5BE2003B8EA6 /* IngredientsGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D0C22C2A3D5BE2003B8EA6 /* IngredientsGridViewModel.swift */; };
 		D5D0C22F2A3E0F08003B8EA6 /* IngredientsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D0C22E2A3E0F08003B8EA6 /* IngredientsList.swift */; };
 		D5D0C2332A3E3F9C003B8EA6 /* SelectedIngredientGridCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D0C2322A3E3F9C003B8EA6 /* SelectedIngredientGridCellView.swift */; };
-		D5D0C2352A3E4FE7003B8EA6 /* cocktailLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = D5D0C2342A3E4FE7003B8EA6 /* cocktailLogo.png */; };
-		D5D0C2372A3E58FD003B8EA6 /* cocktailList.png in Resources */ = {isa = PBXBuildFile; fileRef = D5D0C2362A3E58FD003B8EA6 /* cocktailList.png */; };
 		D5EA57D629DCA4CF002B881D /* TestUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA57D529DCA4CF002B881D /* TestUIView.swift */; };
 		D5EA57DE29DCA6CA002B881D /* bottomLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = D5EA57DB29DCA6CA002B881D /* bottomLogo.png */; };
 		D5EA57DF29DCA6CA002B881D /* backgroundApp.png in Resources */ = {isa = PBXBuildFile; fileRef = D5EA57DC29DCA6CA002B881D /* backgroundApp.png */; };
@@ -66,11 +67,15 @@
 
 /* Begin PBXFileReference section */
 		D51E47E829D5F5D600CBF182 /* CoreDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewModel.swift; sourceTree = "<group>"; };
+		D543408B2A3E6906000C2859 /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		D591C4CB2A3B6DA400F30DAF /* CocktailList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailList.swift; sourceTree = "<group>"; };
 		D591C4CD2A3B723000F30DAF /* CocktailListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailListView.swift; sourceTree = "<group>"; };
 		D591C4CF2A3B73F000F30DAF /* CocktailListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailListViewModel.swift; sourceTree = "<group>"; };
 		D591C4D12A3B776600F30DAF /* SelectedCocktailListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCocktailListView.swift; sourceTree = "<group>"; };
 		D591C4D32A3BB8DB00F30DAF /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		D5A01F072A3F63860039A88A /* cocktailLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cocktailLogo.png; sourceTree = "<group>"; };
+		D5A01F082A3F63860039A88A /* liquorBottles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = liquorBottles.png; sourceTree = "<group>"; };
+		D5A01F092A3F63860039A88A /* cocktailList.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cocktailList.png; sourceTree = "<group>"; };
 		D5B3A6C029D3C10900F4A151 /* GetACocktail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetACocktail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B3A6C329D3C10900F4A151 /* GetACocktailApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetACocktailApp.swift; sourceTree = "<group>"; };
 		D5B3A6C729D3C10A00F4A151 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,7 +97,6 @@
 		D5B3A71F29D3CA3700F4A151 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		D5B987B329DB63A400BCBBE0 /* SelectedFavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedFavoriteView.swift; sourceTree = "<group>"; };
 		D5C66BE029D5FC9000E2BD2B /* CocktailContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CocktailContainer.xcdatamodel; sourceTree = "<group>"; };
-		D5D0C2222A3D4EB4003B8EA6 /* liquorBottles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = liquorBottles.png; sourceTree = "<group>"; };
 		D5D0C2242A3D5585003B8EA6 /* IngredientsGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsGridView.swift; sourceTree = "<group>"; };
 		D5D0C2262A3D58E5003B8EA6 /* IngredientsGridCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsGridCellView.swift; sourceTree = "<group>"; };
 		D5D0C2282A3D59B9003B8EA6 /* SelectedIngredientGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedIngredientGridView.swift; sourceTree = "<group>"; };
@@ -100,8 +104,6 @@
 		D5D0C22C2A3D5BE2003B8EA6 /* IngredientsGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsGridViewModel.swift; sourceTree = "<group>"; };
 		D5D0C22E2A3E0F08003B8EA6 /* IngredientsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsList.swift; sourceTree = "<group>"; };
 		D5D0C2322A3E3F9C003B8EA6 /* SelectedIngredientGridCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedIngredientGridCellView.swift; sourceTree = "<group>"; };
-		D5D0C2342A3E4FE7003B8EA6 /* cocktailLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cocktailLogo.png; sourceTree = "<group>"; };
-		D5D0C2362A3E58FD003B8EA6 /* cocktailList.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cocktailList.png; sourceTree = "<group>"; };
 		D5EA57D529DCA4CF002B881D /* TestUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUIView.swift; sourceTree = "<group>"; };
 		D5EA57DB29DCA6CA002B881D /* bottomLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottomLogo.png; sourceTree = "<group>"; };
 		D5EA57DC29DCA6CA002B881D /* backgroundApp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundApp.png; sourceTree = "<group>"; };
@@ -199,10 +201,10 @@
 				D5EA57DC29DCA6CA002B881D /* backgroundApp.png */,
 				D5EA57DD29DCA6CA002B881D /* backgroundHome.png */,
 				D5EA57DB29DCA6CA002B881D /* bottomLogo.png */,
-				D5D0C2362A3E58FD003B8EA6 /* cocktailList.png */,
-				D5D0C2342A3E4FE7003B8EA6 /* cocktailLogo.png */,
+				D5A01F092A3F63860039A88A /* cocktailList.png */,
+				D5A01F072A3F63860039A88A /* cocktailLogo.png */,
 				D5B3A71029D3C83300F4A151 /* favoriteCocktail.png */,
-				D5D0C2222A3D4EB4003B8EA6 /* liquorBottles.png */,
+				D5A01F082A3F63860039A88A /* liquorBottles.png */,
 				D5B3A70F29D3C83300F4A151 /* randomCocktail.png */,
 			);
 			path = Artwork;
@@ -236,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				D5B3A6C329D3C10900F4A151 /* GetACocktailApp.swift */,
+				D543408B2A3E6906000C2859 /* LaunchScreenView.swift */,
 				D5B3A70329D3C34500F4A151 /* MainView.swift */,
 				D591C4CD2A3B723000F30DAF /* CocktailListView.swift */,
 				D591C4D12A3B776600F30DAF /* SelectedCocktailListView.swift */,
@@ -369,10 +372,10 @@
 				D5EA57DF29DCA6CA002B881D /* backgroundApp.png in Resources */,
 				D5B3A6CB29D3C10A00F4A151 /* Preview Assets.xcassets in Resources */,
 				D5B3A6C829D3C10A00F4A151 /* Assets.xcassets in Resources */,
-				D5D0C2352A3E4FE7003B8EA6 /* cocktailLogo.png in Resources */,
 				D5EA57E029DCA6CA002B881D /* backgroundHome.png in Resources */,
-				D5D0C2372A3E58FD003B8EA6 /* cocktailList.png in Resources */,
-				D5D0C2232A3D4EB4003B8EA6 /* liquorBottles.png in Resources */,
+				D5A01F0A2A3F63860039A88A /* cocktailLogo.png in Resources */,
+				D5A01F0C2A3F63860039A88A /* cocktailList.png in Resources */,
+				D5A01F0B2A3F63860039A88A /* liquorBottles.png in Resources */,
 				D5EA57DE29DCA6CA002B881D /* bottomLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D543408C2A3E6906000C2859 /* LaunchScreenView.swift in Sources */,
 				D5D0C22F2A3E0F08003B8EA6 /* IngredientsList.swift in Sources */,
 				D5B3A71E29D3CA2B00F4A151 /* RandomViewModel.swift in Sources */,
 				D5D0C2272A3D58E5003B8EA6 /* IngredientsGridCellView.swift in Sources */,
@@ -588,6 +592,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.swift;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -618,6 +623,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.swift;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (

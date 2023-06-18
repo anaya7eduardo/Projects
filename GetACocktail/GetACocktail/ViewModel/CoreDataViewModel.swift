@@ -11,6 +11,7 @@ import SwiftUI
 class CoreDataViewModel: ObservableObject {
     
     let container: NSPersistentContainer
+    
     @Published var savedEntities: [CocktailEntity] = []
     
     init() {
@@ -24,9 +25,9 @@ class CoreDataViewModel: ObservableObject {
     }
     
     func fetchCocktails() {
-        let request = NSFetchRequest<CocktailEntity>(entityName: "CocktailEntity")
+        let fetchRequest = NSFetchRequest<CocktailEntity>(entityName: "CocktailEntity")
         do {
-            savedEntities = try container.viewContext.fetch(request)
+            savedEntities = try container.viewContext.fetch(fetchRequest)
         } catch let error {
             print("Error Fetching Core Data: \(error.localizedDescription)")
         }
@@ -47,6 +48,17 @@ class CoreDataViewModel: ObservableObject {
         let entity = savedEntities[index]
         container.viewContext.delete(entity)
         saveData()
+    }
+    
+    func deleteAllCocktails() {
+        let fetchRequest: NSFetchRequest<CocktailEntity> = NSFetchRequest(entityName: "CocktailEntity")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest as! NSFetchRequest<NSFetchRequestResult>)
+        do {
+            try container.viewContext.execute(deleteRequest)
+            saveData()
+        } catch let error {
+            print("Error Deleting Data: \(error.localizedDescription)")
+        }
     }
     
     func saveData() {
