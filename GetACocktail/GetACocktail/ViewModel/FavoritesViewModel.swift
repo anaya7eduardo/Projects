@@ -25,7 +25,7 @@ class FavoritesViewModel: ObservableObject {
                 
             case .empty:
                 ZStack {
-                    Image(uiImage: UIImage(named: "cocktailLogo")!)
+                    Image(uiImage: UIImage(named: "cocktailLogoThumb")!)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .clipShape(RoundedRectangle(cornerRadius: radius))

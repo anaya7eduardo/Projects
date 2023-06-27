@@ -22,13 +22,13 @@ struct MainView: View {
                     .edgesIgnoringSafeArea(.all)
                 
                 VStack {
-                    NavigationLinkLogo(destination: CocktailListView(), image: "cocktailList", title: "List", textColor: mainViewModel.textColor(colorScheme), textShadow: mainViewModel.shadowColor(colorScheme), shadow: .white)
+                    NavigationLinkLogo(destination: CocktailListView(), image: "cocktailThumb", title: "List", textColor: mainViewModel.textColor(colorScheme), textShadow: mainViewModel.shadowColor(colorScheme), shadow: .white)
                     
-                    NavigationLinkLogo(destination: IngredientsGridView(), image: "liquorBottles", title: "Ingredients", textColor: mainViewModel.textColor(colorScheme), textShadow: mainViewModel.shadowColor(colorScheme), shadow: .purple)
+                    NavigationLinkLogo(destination: IngredientsGridView(), image: "bottlesThumb", title: "Ingredients", textColor: mainViewModel.textColor(colorScheme), textShadow: mainViewModel.shadowColor(colorScheme), shadow: .purple)
                     
-                    NavigationLinkLogo(destination: RandomView(), image: "randomCocktail", title: "Random", textColor: mainViewModel.textColor(colorScheme), textShadow: mainViewModel.shadowColor(colorScheme), shadow: .teal)
+                    NavigationLinkLogo(destination: RandomView(), image: "randomThumb", title: "Random", textColor: mainViewModel.textColor(colorScheme), textShadow: mainViewModel.shadowColor(colorScheme), shadow: .teal)
                     
-                    NavigationLinkLogo(destination: FavoritesView(), image: "favoriteCocktail", title: "Favorites", textColor: mainViewModel.textColor(colorScheme), textShadow: mainViewModel.shadowColor(colorScheme), shadow: .yellow)
+                    NavigationLinkLogo(destination: FavoritesView(), image: "favoriteThumb", title: "Favorites", textColor: mainViewModel.textColor(colorScheme), textShadow: mainViewModel.shadowColor(colorScheme), shadow: .yellow)
                 }.padding()
             }
         }
