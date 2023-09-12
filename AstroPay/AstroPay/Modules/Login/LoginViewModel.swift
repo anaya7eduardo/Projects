@@ -21,11 +21,13 @@ class LoginViewModel {
 }
 
 extension LoginViewModel: LoginViewModelActions {
+    
+    // checks if valid email and password has length greater than 8 then login success
     func login(userName: String, password: String) -> Bool {
-        if userName.isValidEmail() && password.count > 7 {
-            // check if valid email and password has length greater than 8 then login success
-            return true
-        }
-        return false
+//        if userName.isValidEmail() && password.count > 7 {
+//            return true
+//        }
+//        return false
+        return userName.isValidEmail() && password.count > 7 ? true : false
     }
 }

@@ -232,3 +232,83 @@ armstrong(407)
 //for i in 1...100000 {
 //    armstrong(i)
 //}
+
+// find 2nd biggest value in the array
+// [2,7,9,21,54,74,1,81]
+
+let array = [2,7,9,21,54,74,1,81]
+
+// Function that returns 2nd biggest value in an array
+func secondBiggest(_ numbers: [Int]) -> Int? {
+    if numbers.count < 2 {
+        return nil // Not enough elements to find a second largest
+    }
+    
+    var largest: Int
+    var secondLargest: Int
+    
+    if numbers[0] > numbers[1] {
+        largest = numbers[0]
+        secondLargest = numbers[1]
+    } else {
+        largest = numbers[1]
+        secondLargest = numbers[0]
+    }
+    
+    // Iterate over array, stops at length -1
+    for i in 2..<numbers.count {
+        let number = numbers[i]
+        if number > largest {
+            secondLargest = largest
+            largest = number
+        } else if number > secondLargest && number != largest {
+            secondLargest = number
+        }
+    }
+    
+    // return match
+    return secondLargest
+}
+
+// test
+//secondBiggest(array)
+
+if let secondLargest = secondBiggest(array) {
+    print("Second largest number: \(secondLargest)")
+} else {
+    print("No second largest number found.")
+}
+
+//get only 1000000 from the above string
+//you can remove all other characters including special characters like, and other characters
+let stringS = "Hey, this is Eduardo and I own USD10,00,000"
+
+func getNumbersOnly(_ text: String) -> String? {
+    
+    // Initialize an empty string to store the extracted digits
+    var extractedDigits = ""
+    
+    // Iterate through each character in the input string
+    for char in text {
+        if char.isNumber {
+            // If the character is a digit, append it to the extractedDigits string
+            extractedDigits.append(char)
+        }
+    }
+    
+    if extractedDigits.isEmpty {
+        return nil
+    }
+    
+    // return digits
+    return extractedDigits
+}
+
+// test
+//getNumbersOnly(stringS)
+
+if let numbersOnly = getNumbersOnly(stringS) {
+    print("Extracted integer: \(numbersOnly)")
+} else {
+    print("No valid integer found.")
+}

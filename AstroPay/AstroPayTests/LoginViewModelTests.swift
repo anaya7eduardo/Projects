@@ -10,7 +10,7 @@ import XCTest
 
 final class LoginViewModelTests: XCTestCase {
 
-    let loginViewModel = LoginViewModel()
+    let loginViewModel = LoginViewModel(app: App())
 
     func testLoginSuccess() {
         let email = "test@tester.com"
